@@ -1,0 +1,61 @@
+@import '../../../styles/variables';
+
+.tabs {
+	overflow: auto;
+	white-space: nowrap;
+	padding-bottom: 4px;
+	margin-bottom: 20px;
+
+	&::-webkit-scrollbar {
+		height: 3px;
+	}
+
+	.item {
+		min-width: 60px;
+		cursor: pointer;
+		user-select: none;
+		display: inline-block;
+		text-align: center;
+		font-size: 16px;
+		font-weight: 500;
+		padding: 12px 24px;
+		border-radius: 6px;
+		background: #fff;
+		color: #202939;
+		border: 1px solid #eaedf2;
+
+		& + .item {
+			margin-left: 8px;
+		}
+
+		&.active {
+			color: #fff;
+			background: #3772ff;
+			border: 1px solid #3772ff;
+		}
+
+		.flex {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+		}
+
+		.dot {
+			width: 12px;
+			height: 12px;
+			border-radius: 50%;
+		}
+	}
+}
+
+@media (min-width: $widthMobile) and (max-width: $widthTablet) {
+	.item {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: $widthMobile) {
+	.item {
+		font-size: 13px;
+	}
+}

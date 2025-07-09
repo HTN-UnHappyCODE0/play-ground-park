@@ -1,0 +1,58 @@
+.container {
+	margin-top: 16px;
+	border-radius: 16px;
+	background: #fff;
+	// box-shadow: 0px 32px 32px 0px rgba(118, 131, 149, 0.08);
+}
+
+.head {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 12px 20px;
+	flex-wrap: wrap; // thêm dòng này để các phần tử tự xuống dòng nếu cần
+
+	@media (max-width: 768px) {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
+
+.info {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+
+	& > h4 {
+		color: #314353;
+		font-size: 20px;
+		font-weight: 700;
+	}
+}
+
+.line {
+	width: 100%;
+	height: 1px;
+	background-color: #dde0e6;
+}
+
+.main {
+	padding: 12px 16px;
+}
+
+.actions {
+	display: flex;
+	gap: 12px;
+
+	@media (max-width: 540px) {
+		overflow-x: auto;
+		width: 100%;
+		padding-bottom: 4px;
+
+		scrollbar-width: none;
+		-ms-overflow-style: none;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+}

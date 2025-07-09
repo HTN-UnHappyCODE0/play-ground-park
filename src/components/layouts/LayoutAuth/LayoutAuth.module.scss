@@ -1,0 +1,43 @@
+@import "../../../styles/variables";
+
+.container {
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.background {
+	background-image: url("../../../../public/static/images/background_auth.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.main {
+	display: flex;
+	align-items: center;
+	padding: 0 200px;
+	background-color: #fff;
+}
+
+@media (max-width: 1600px) {
+	.main {
+		padding: 0 100px;
+	}
+}
+
+@media (max-width: $widthTablet) {
+	.container {
+		grid-template-columns: 1fr;
+	}
+
+	.background {
+		display: none;
+	}
+}
+
+@media (max-width: $widthMobile) {
+	.main {
+		padding: 0 40px;
+	}
+}

@@ -1,0 +1,48 @@
+@import '../../../styles/variables';
+
+.container {
+	overflow: auto;
+	white-space: nowrap;
+	padding-bottom: 4px;
+
+	&::-webkit-scrollbar {
+		height: 3px;
+	}
+
+	.item {
+		min-width: 60px;
+		cursor: pointer;
+		user-select: none;
+		display: inline-block;
+		text-align: center;
+		font-size: 16px;
+		font-weight: 500;
+		padding: 10px 24px;
+		border-radius: 100px;
+		background: #fff;
+		color: #202939;
+		border: 1px solid #eaedf2;
+
+		& + .item {
+			margin-left: 8px;
+		}
+
+		&.active {
+			color: #fff;
+			background: #0019f6;
+			border: 1px solid #0019f6;
+		}
+	}
+}
+
+@media (min-width: $widthMobile) and (max-width: $widthTablet) {
+	.item {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: $widthMobile) {
+	.item {
+		font-size: 13px;
+	}
+}

@@ -1,0 +1,56 @@
+.icon_round {
+	width: fit-content;
+	height: fit-content;
+	padding: 8px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.icon {
+		width: 40px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 8px;
+		border-radius: 50%;
+		color: #23262f;
+		font-size: 20px;
+		font-weight: 400;
+	}
+}
+
+.primary {
+	background-color: #e6edfb;
+}
+.success,
+.successPlay {
+	background-color: #defbeb;
+}
+.warning {
+	background-color: #fff4e5;
+}
+.error,
+.errorWarning,
+.errorEnd,
+.errorGoods {
+	background-color: #ffeaea;
+}
+
+.primaryInner {
+	background-color: #d0dcfb;
+}
+.successInner,
+.successPlayInner {
+	background-color: #bdf3d3;
+}
+.warningInner {
+	background-color: #ffe1b3;
+}
+.errorInner,
+.errorWarningInner,
+.errorEndInner,
+.errorGoodsInner {
+	background-color: #ffc5c5;
+}

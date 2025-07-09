@@ -1,0 +1,138 @@
+.container {
+	min-width: 240px;
+	height: 48px;
+	padding: 0 16px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 2px;
+	user-select: none;
+	border-radius: 4px;
+	background-color: #fff;
+	border: 1px solid #e1e5ed;
+	cursor: pointer;
+	transition: 0.3s;
+
+	&:hover {
+		border: 1px solid #0019f6;
+	}
+
+	&.styleRounded {
+		min-width: 200px;
+		height: 40px;
+		border-radius: 50px;
+		background-color: #f0f2fa;
+	}
+
+	&.active {
+		border: 1px solid #0019f6;
+
+		.icon_arrow {
+			transform: rotate(-180deg);
+		}
+	}
+
+	.value {
+		display: flex;
+		align-items: center;
+	}
+
+	.name {
+		font-weight: 500;
+		font-size: 14px;
+		color: #777e90;
+	}
+
+	.text {
+		flex: 1;
+		font-size: 14px;
+		font-weight: 500;
+		margin-left: 8px;
+		max-width: 240px;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		word-break: break-word;
+		-webkit-line-clamp: 1;
+	}
+
+	.icon_arrow {
+		transition: 0.3s;
+		margin-left: 10px;
+	}
+}
+
+.mainOption {
+	min-width: 240px;
+	margin-top: 2px;
+	padding: 10px;
+	border-radius: 20px;
+	background: #fff;
+	box-shadow:
+		0px 137px 123px 0px rgba(175, 175, 175, 0.11),
+		0px 59.642px 64.694px 0px rgba(175, 175, 175, 0.08),
+		0px 29.66px 43.62px 0px rgba(175, 175, 175, 0.07),
+		0px 13.866px 30.709px 0px rgba(175, 175, 175, 0.07),
+		0px 5.309px 20.507px 0px rgba(175, 175, 175, 0.06),
+		0px 1.17px 10.708px 0px rgba(175, 175, 175, 0.05);
+
+	&.styleRounded {
+		min-width: 200px;
+	}
+}
+
+.inputSearch {
+	outline: none;
+	width: 100%;
+	border: 1px solid #e1e5ed;
+	padding: 6px 16px;
+	font-size: 14px;
+	font-weight: 500;
+	margin-bottom: 8px;
+	border-radius: 10px;
+
+	&:focus {
+		border: 1px solid #0019f6;
+	}
+}
+
+.list_option {
+	max-height: 400px;
+	overflow: auto;
+}
+
+.option {
+	cursor: pointer;
+	user-select: none;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	color: #23262f;
+	font-size: 14px;
+	font-weight: 500;
+	padding: 6px 10px;
+	transition: 0.3s;
+	border-bottom: 1px solid #e2e0ec;
+	&:last-child {
+		border-bottom: none;
+	}
+	&:hover {
+		color: #0019f6;
+	}
+
+	& + & {
+		margin-top: 4px;
+	}
+
+	&.option_active {
+		color: #0019f6;
+	}
+}
+
+.icon_check {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
