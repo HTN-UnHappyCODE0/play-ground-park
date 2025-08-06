@@ -33,6 +33,10 @@
 	}
 }
 
+.hamburger_icon_mobile {
+	display: none;
+}
+
 .main_info {
 	display: flex;
 	align-items: center;
@@ -178,6 +182,14 @@
 		display: none;
 	}
 
+	.hamburger_icon {
+		display: none;
+	}
+
+	.hamburger_icon_mobile {
+		display: block;
+	}
+
 	.filter_mobile {
 		top: $height-header;
 		padding: 0 12px;
@@ -197,6 +209,44 @@
 	.main_mobile {
 		&.active {
 			left: 0;
+		}
+	}
+}
+
+@media (max-width: $widthMobile) {
+	.container {
+		padding: 0 8px;
+	}
+
+	.main_info {
+		gap: 16px;
+	}
+
+	.info {
+		gap: 6px;
+
+		.name {
+			font-size: 12px;
+		}
+
+		.regency {
+			font-size: 10px;
+		}
+	}
+
+	.box_noti {
+		width: 32px;
+		height: 32px;
+
+		.box_count {
+			top: -8px;
+			right: -8px;
+			width: 16px;
+			height: 16px;
+
+			& > span {
+				font-size: 10px;
+			}
 		}
 	}
 }

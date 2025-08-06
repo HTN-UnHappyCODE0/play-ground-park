@@ -67,12 +67,15 @@ function SelectMany<OptionType>({
 	};
 
 	const handleRemoveSelected = (itemValue: string | number) => {
-		if (onRemove) onRemove(itemValue);
 		const updated = listDataTerm.filter((v) => v !== itemValue);
 		setlistDataTerm(updated);
-		setSelectedItems?.(updated);
-	};
 
+		if (onRemove) {
+			onRemove(itemValue);
+		} else {
+			setSelectedItems?.(updated);
+		}
+	};
 	const handlerFocused = () => {
 		if (onClickSelect) {
 			onClickSelect();

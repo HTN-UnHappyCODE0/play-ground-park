@@ -3,3 +3,8 @@ export interface PropsBaseLayout {
 	title: string;
 	breadcrumb?: React.ReactNode;
 }
+
+export interface TContextBaseLayout {
+	showFull?: boolean;
+	setShowFull?: (show: boolean) => void;
+}

@@ -138,7 +138,7 @@ function SelectForm<OptionType>({
 							? getOptionLabel(options.find((opt) => getOptionValue(opt) === value)!)
 							: placeholder}
 					</p>
-					{onClean && !!value && (
+					{onClean && !!value && !readOnly &&(
 						<div
 							className={styles.iconClean}
 							onClick={(e) => {

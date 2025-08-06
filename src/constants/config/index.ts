@@ -16,6 +16,16 @@ export enum PATH {
 	UpdateProfile = '/profile/update',
 }
 
+export interface IMenus {
+	titleModel: string;
+	title: string;
+	path?: string;
+	pathActive?: string;
+	isSpecial?: string;
+	icon?: any;
+	children?: IMenus[];
+}
+
 export const Menus: {
 	title: string;
 	group: {

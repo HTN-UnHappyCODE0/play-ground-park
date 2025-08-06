@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {ArrowDown2} from 'iconsax-react';
 import TippyHeadless from '@tippyjs/react/headless';
 
@@ -12,12 +12,16 @@ import Navbar from '../Navbar';
 import {useSelector} from 'react-redux';
 import {RootState, store} from '~/redux/store';
 import MenuProfile from '../MenuProfile';
+import {TContextBaseLayout} from '../../interfaces';
+import {ContextBaseLayout} from '../../BaseLayout';
 
 function Header({title, breadcrumb}: PropsHeader) {
 	const router = useRouter();
 
 	const [openMenu, setOpenMenu] = useState<boolean>(false);
 	const [openProfile, setOpenProfile] = useState<boolean>(false);
+
+	const context = useContext<TContextBaseLayout>(ContextBaseLayout);
 
 	const {infoUser} = useSelector((state: RootState) => state.user);
 
@@ -32,6 +36,7 @@ function Header({title, breadcrumb}: PropsHeader) {
 	useEffect(() => {
 		if (openMenu) {
 			setOpenMenu(false);
+			3;
 		}
 	}, [router]);
 
@@ -48,14 +53,26 @@ function Header({title, breadcrumb}: PropsHeader) {
 	return (
 		<div className={styles.container}>
 			<div className={styles.control}>
-				<Image
-					alt='icon hamburger'
-					src={icons.hamburger}
-					width={20}
-					height={20}
-					className={styles.hamburger}
-					onClick={() => setOpenMenu(true)}
-				/>
+				<div className={styles.hamburger_icon}>
+					<Image
+						alt='icon hamburger'
+						src={icons.hamburger}
+						width={20}
+						height={20}
+						className={styles.hamburger}
+						onClick={() => context?.setShowFull!(!context?.showFull)}
+					/>
+				</div>
+				<div className={styles.hamburger_icon_mobile}>
+					<Image
+						alt='icon hamburger'
+						src={icons.hamburger}
+						width={20}
+						height={20}
+						className={styles.hamburger}
+						onClick={() => setOpenMenu(true)}
+					/>
+				</div>
 				{breadcrumb ? breadcrumb : <h4>{title}</h4>}
 			</div>
 			<div className={styles.main_info}>
